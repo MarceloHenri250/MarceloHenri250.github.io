@@ -161,3 +161,15 @@ button:hover {
     background-color: #00cc70;
     transform: scale(1.1);
 }
+
+/* About Box */
+.about-box {
+    background-color: #1b1b1b; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 15px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza a caixa */
+    color: #e0e0e0; /* Cor do texto */
+    line-height: 1.8; /* Melhor espaçamento entre linhas */
+}
