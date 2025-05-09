@@ -346,20 +346,21 @@ contact-item:hover {
         flex-direction: column; /* Empilha os elementos verticalmente */
         align-items: center;
         text-align: center;
+        padding: 20px; /* Reduz o padding */
     }
 
     .hero-image {
-        width: 150px; /* Reduz o tamanho da imagem */
-        height: 150px;
-        margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+        width: 120px; /* Reduz o tamanho da imagem */
+        height: 120px;
+        margin-bottom: 15px; /* Espaçamento abaixo da imagem */
     }
 
     .hero-text h1 {
-        font-size: 2rem; /* Reduz o tamanho do título */
+        font-size: 1.8rem; /* Reduz o tamanho do título */
     }
 
     .hero-text h2 {
-        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
+        font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
     }
 
     .hero-text p {
@@ -368,24 +369,25 @@ contact-item:hover {
 
     /* Seção de Contato */
     .contact-info {
-        grid-template-columns: 1fr; /* Cada item ocupa uma linha */
-        gap: 15px; /* Reduz o espaçamento entre os itens */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid */
+        gap: 20px; /* Espaçamento consistente */
     }
 
     .contact-item {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
-        text-align: center; /* Centraliza o texto */
-        padding: 15px; /* Reduz o padding interno */
+        flex-direction: row; /* Mantém os itens alinhados horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        text-align: left; /* Mantém o texto alinhado à esquerda */
+        padding: 20px; /* Padding consistente com o desktop */
     }
 
     .contact-item i {
-        font-size: 2.5rem; /* Aumenta o tamanho do ícone */
-        margin-bottom: 10px; /* Adiciona espaçamento abaixo do ícone */
+        font-size: 1.5rem; /* Reduz o tamanho do ícone */
+        margin-right: 10px; /* Espaçamento entre ícone e texto */
+        margin-bottom: 0; /* Remove o espaçamento inferior */
     }
 
     .contact-item div p, .contact-item div a {
-        font-size: 1rem; /* Mantém o texto legível */
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
     }
 
     /* Layout Geral */
