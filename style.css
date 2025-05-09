@@ -1,60 +1,76 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
     background-color: #121212; /* Preto */
     color: #e0e0e0; /* Cinza claro */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #1b1b1b; /* Preto mais claro */
-    color: #00ff88; /* Verde neon */
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #00ff88, #00cc70); /* Gradiente verde */
+    color: #121212; /* Preto */
+    padding: 60px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 0;
+    font-weight: bold;
 }
 
 header h2 {
-    font-size: 1.5rem;
-    color: #00cc70; /* Verde mais escuro */
+    font-size: 1.8rem;
     margin-top: 10px;
+    font-weight: 300;
 }
 
-social-links a {
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
     display: inline-block;
     margin: 0 10px;
-    padding: 10px 15px;
-    background-color: #00ff88;
-    color: #121212;
+    padding: 10px 20px;
+    background-color: #121212; /* Preto */
+    color: #00ff88; /* Verde neon */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 25px;
+    font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-social-links a:hover {
-    background-color: #00cc70;
+.social-links a:hover {
+    background-color: #00cc70; /* Verde mais escuro */
     transform: scale(1.1);
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     border-bottom: 1px solid #333;
+    text-align: center;
 }
 
 section h2 {
     color: #00ff88;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 section p, section ul {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 ul {
@@ -64,10 +80,15 @@ ul {
 
 ul li {
     background-color: #1b1b1b;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
 }
 
 footer {
@@ -80,4 +101,21 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+button {
+    background-color: #00ff88;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #00cc70;
+    transform: scale(1.1);
 }
