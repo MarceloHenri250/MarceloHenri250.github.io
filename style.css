@@ -376,18 +376,23 @@ contact-item:hover {
     .contact-item {
         flex-direction: row; /* Mantém os itens alinhados horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        text-align: left; /* Mantém o texto alinhado à esquerda */
-        padding: 20px; /* Padding consistente com o desktop */
+        text-align: left; /* Alinha o texto à esquerda */
+        padding: 20px; /* Padding consistente */
+    }
+
+    .contact-item div {
+        text-align: left; /* Garante que o texto dentro do div fique alinhado à esquerda */
+    }
+
+    .contact-item div p,
+    .contact-item div a {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+        margin: 5px 0; /* Espaçamento entre as linhas */
     }
 
     .contact-item i {
         font-size: 1.5rem; /* Reduz o tamanho do ícone */
         margin-right: 10px; /* Espaçamento entre ícone e texto */
-        margin-bottom: 0; /* Remove o espaçamento inferior */
-    }
-
-    .contact-item div p, .contact-item div a {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
     }
 
     /* Layout Geral */
