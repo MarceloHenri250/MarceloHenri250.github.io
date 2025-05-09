@@ -81,7 +81,7 @@ hero-text h2 {
     font-size: 1.2rem;
 }
 
-.social-links a:hover {
+social-links a:hover {
     background-color: #000000;
     transform: scale(1.1);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
@@ -280,7 +280,7 @@ button:hover {
     font-size: 1rem;
 }
 
-.contact-item:hover {
+contact-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
@@ -341,21 +341,63 @@ button:hover {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    /* Hero Section */
     .hero-content {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os elementos verticalmente */
         align-items: center;
         text-align: center;
     }
 
     .hero-image {
-        margin-bottom: 20px;
+        width: 150px; /* Reduz o tamanho da imagem */
+        height: 150px;
+        margin-bottom: 20px; /* Espaçamento abaixo da imagem */
     }
 
-    .hero-text {
-        max-width: 100%;
+    .hero-text h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
     }
 
-    .social-links {
-        justify-content: center;
+    .hero-text h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Reduz o tamanho do texto */
+    }
+
+    /* Seção de Contato */
+    .contact-info {
+        grid-template-columns: 1fr; /* Cada item ocupa uma linha */
+        gap: 15px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        text-align: center; /* Centraliza o texto */
+        padding: 15px; /* Reduz o padding interno */
+    }
+
+    .contact-item i {
+        font-size: 2.5rem; /* Aumenta o tamanho do ícone */
+        margin-bottom: 10px; /* Adiciona espaçamento abaixo do ícone */
+    }
+
+    .contact-item div p, .contact-item div a {
+        font-size: 1rem; /* Mantém o texto legível */
+    }
+
+    /* Layout Geral */
+    body {
+        padding: 10px; /* Reduz o padding geral */
+    }
+
+    section {
+        padding: 40px 10px; /* Reduz o padding das seções */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduz o tamanho do texto no rodapé */
     }
 }
