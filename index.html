@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Marcelo Henrique</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.min.css">
     <style>
         i {
             margin-right: 8px;
-            color: #00ff88; /* Verde neon */
+            color: #00ff88;
         }
 
         .social-links a i {
@@ -23,15 +24,23 @@
 </head>
 <body>
     <header class="hero">
-        <h1>Marcelo Henrique</h1>
-        <h2>Back-end Developer</h2>
-        <div class="social-links">
-            <a href="https://github.com/MarceloHenri250" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/marcelo-henrique-de-souza-mendes-b869911a5/" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="assets/Foto Perfil.jpg" alt="Foto de Perfil">
+            </div>
+            <div class="hero-text">
+                <h1>Marcelo Henrique</h1>
+                <h2>Back-end Developer</h2>
+                <p>Transformando ideias em soluções eficientes.</p>
+                <div class="social-links">
+                    <a href="https://github.com/MarceloHenri250" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcelo-henrique-de-souza-mendes-b869911a5/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -62,25 +71,25 @@
             <ul>
                 <li>Back-end:
                     <ul>
-                        <li><i class="fas fa-code"></i> C#</li>
-                        <li><i class="fas fa-database"></i> SQL Server</li>
-                        <li><i class="fas fa-database"></i> MySQL</li>
                         <li><i class="fas fa-server"></i> ASP.net MVC</li>
+                        <li><i class="fas fa-code"></i> C#</li>
+                        <li><i class="fi fi-brands-mysql"></i> MySQL</li>
+                        <li><i class="fas fa-database"></i> SQL Server</li>
                         <li><i class="fab fa-python"></i> Python</li>
                     </ul>
                 </li>
                 <li>Front-end:
                     <ul>
-                        <li><i class="fab fa-html5"></i> HTML</li>
                         <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-html5"></i> HTML</li>
                         <li><i class="fab fa-js"></i> JavaScript</li>
                         <li><i class="fab fa-react"></i> React Native</li>
                     </ul>
                 </li>
                 <li>Data Analysis:
                     <ul>
-                        <li><i class="fas fa-chart-bar"></i> Power BI</li>
                         <li><i class="fas fa-file-excel"></i> Excel</li>
+                        <li><i class="fas fa-chart-bar"></i> Power BI</li>
                         <li><i class="fas fa-cogs"></i> VBA</li>
                     </ul>
                 </li>
@@ -92,18 +101,38 @@
             </ul>
         </section>
 
-        <section>
+        <section class="contact">
             <h2>Contato</h2>
-            <p>
-                Você pode entrar em contato comigo pelo e-mail: 
-                <a href="mailto:mhsmendes620@gmail.com">mhsmendes620@gmail.com</a>
-            </p>
+            <p>Sinta-se à vontade para entrar em contato comigo através dos canais abaixo:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <p>Email:</p>
+                        <a href="mailto:mhsmendes620@gmail.com">mhsmendes620@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <p>Telefone:</p>
+                        <p>(24) 99938-6175</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Endereço:</p>
+                        <p>Itatiaia, RJ</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; Desenvolvido por Marcelo Henrique</p>
-    </footer>
+        <footer>
+            <p>© Desenvolvido por Marcelo Henrique</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
