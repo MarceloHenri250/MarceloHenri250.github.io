@@ -26,7 +26,7 @@
     <header class="hero">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="assets/Foto Perfil.jpg" alt="Foto de Perfil">
+                <img src="assets/Perfil/Foto Perfil.jpg " alt="Foto de Perfil">
             </div>
             <div class="hero-text">
                 <h1>Marcelo Henrique</h1>
@@ -58,12 +58,71 @@
 
         <section>
             <h2>Projetos</h2>
-            <ul>
-                <li>
-                    <h3>Projetos Futuros</h3>
-                    <p>Planejo adicionar mais projetos em breve. Fique de olho!</p>
-                </li>
-            </ul>
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="carousel">
+                        <button class="carousel-btn prev">&lt;</button>
+                        <div class="carousel-images">
+                            <img src="assets/BookSphere/TelaInicial.jpg" alt="Imagem da Tela Inicial">
+                            <img src="assets/BookSphere/CadastroUsuario.jpg" alt="Imagem da Tela de Cadastro">
+                            <img src="assets/BookSphere/LoginUsuario.jpg" alt="Imagem da Tela de Login">
+                            <img src="assets/BookSphere/TelaInicialAdmin.jpg" alt="Imagem da Tela Inicial Admin">
+                            <img src="assets/BookSphere/DetalhesLivro.jpg" alt="Imagem da Tela de Detalhes do Livro">
+                            <img src="assets/BookSphere/GerenciarLivros.jpg" alt="Imagem da Tela de Gerenciar Livros">
+                            <img src="assets/BookSphere/GerenciarAutores.jpg" alt="Imagem da Tela de Gerenciar Autores">
+                            <img src="assets/BookSphere/GerenciarEditoras.jpg" alt="Imagem da Tela de Gerenciar Editoras">
+                            <img src="assets/BookSphere/GerenciarCategorias.jpg" alt="Imagem da Tela de Gerenciar Categorias">
+                            <img src="assets/BookSphere/GerenciarUsuarios.jpg" alt="Imagem da Tela de Gerenciar Usuários">
+                            <img src="assets/BookSphere/MinhaBiblioteca.jpg" alt="Imagem da Tela da Minha Biblioteca">  
+                        </div>
+                        <button class="carousel-btn next">&gt;</button>
+                    </div>
+                    <div class="project-content">
+                        <h3>BookSphere</h3>
+                        <p><strong>Descrição:</strong> BookSphere é uma biblioteca digital que permite gerenciar livros, categorias e usuários de forma eficiente, ideal para leitores e administradores.</p>
+                        <p><strong>Principais Funcionalidades:</strong> Gerenciamento de livros, favoritos, categorias personalizadas, perfis de usuário e sistema de autenticação seguro.</p>
+                        <p><strong>Tecnologias:</strong> C#, ASP.NET MVC, SQL Server, HTML, CSS, JavaScript, Razor Pages, Bootstrap.</p>
+                        <a href="https://github.com/MarceloHenri250/BookSphere" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="carousel">
+                        <button class="carousel-btn prev">&lt;</button>
+                        <div class="carousel-images">
+                            <img src="assets/FlowStock/Login.png" alt="Imagem da Tela de Login">
+                            <img src="assets/FlowStock/NivelAcessoInfo.png" alt="Imagem da Tela de Nível de Acesso">
+                            <img src="assets/FlowStock/TelaInicialGraficos.png" alt="Imagem da Tela Inicial com Gráficos">
+                            <img src="assets/FlowStock/TelaInicialMovimentacoes.png" alt="Imagem da Tela Inicial com Movimentações">
+                            <img src="assets/FlowStock/ConsultarEstoque.png" alt="Imagem da Tela de Consultar Estoque">
+                            <img src="assets/FlowStock/GerarRelatorios.png" alt="Imagem da Tela de Gerar Relatórios">
+                            <img src="assets/FlowStock/MovimentacaoEstoque.png" alt="Imagem da Tela de Movimentação de Estoque">
+                            <img src="assets/FlowStock/GerirUsuarios.png" alt="Imagem da Tela de Gerir Usuários">
+                            <img src="assets/FlowStock/NivelEstoque.png" alt="Imagem da Tela de Nível de Estoque">
+                            <img src="assets/FlowStock/PermissaoUsuario.png" alt="Imagem da Tela de Permissão de Usuário">
+                        </div>
+                        <button class="carousel-btn next">&gt;</button>
+                    </div>
+                    <div class="project-content">
+                        <h3>FlowStock</h3>
+                        <p><strong>Descrição:</strong> FlowStock é um sistema de gerenciamento de estoque desenvolvido em C# com Windows Forms. Ele permite o controle de produtos, movimentações de estoque, permissões de usuários e geração de relatórios.</p>
+                        <p><strong>Principais Funcionalidades:</strong> Gerenciamento de Produtos, Movimentações de Estoque, Monitoramento de Estoque, Permissões de Usuários, Geração de Relatórios, Gráficos e Resumos.</p>
+                        <p><strong>Tecnologias:</strong>  C#, Windows Forms, SQL Server, Dapper, ClosedXML.</p>
+                        <a href="https://github.com/MarceloHenri250/FlowStock" target="_blank" class="btn">
+                            <i class="fab fa-github"></i> Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Em Breve</h3>
+                        <p><strong>Descrição:</strong> Novos projetos estão sendo desenvolvidos e serão adicionados em breve. Fique atento para mais atualizações!</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -128,6 +187,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal para visualização de imagens -->
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div>
 
         <footer>
             <p>© Desenvolvido por Marcelo Henrique</p>

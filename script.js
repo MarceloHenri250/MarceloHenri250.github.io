@@ -28,3 +28,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Carrossel de imagens
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const images = carousel.querySelector('.carousel-images');
+    const totalImages = images.children.length;
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+        images.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    // Botão "Anterior"
+    carousel.querySelector('.prev').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+        updateCarousel();
+    });
+
+    // Botão "Próximo"
+    carousel.querySelector('.next').addEventListener('click', () => {
+        currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+});
+
+// Abrir modal ao clicar em uma imagem
+document.querySelectorAll('.carousel-images img').forEach(img => {
+    img.addEventListener('click', () => {
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        modal.style.display = 'block';
+        modalImage.src = img.src;
+    });
+});
+
+// Fechar modal ao clicar no botão de fechar
+document.querySelector('.modal .close').addEventListener('click', () => {
+    document.getElementById('image-modal').style.display = 'none';
+});
+
+// Fechar modal ao clicar fora da imagem
+document.getElementById('image-modal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = 'none';
+    }
+});

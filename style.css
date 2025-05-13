@@ -41,7 +41,7 @@ header.hero {
     font-weight: bold;
 }
 
-hero-text h2 {
+.hero-text h2 {
     font-size: 1.8rem;
     margin: 10px 0;
     font-weight: 300;
@@ -53,12 +53,11 @@ hero-text h2 {
     color: #333;
 }
 
+/* Estilo dos Links Sociais */
 .social-links {
-    margin-top: 20px;
     display: flex;
-    justify-content: flex-start;
     gap: 15px;
-    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .social-links a {
@@ -66,25 +65,24 @@ hero-text h2 {
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    background-color: #121212;
-    color: #00ff88;
-    text-decoration: none;
-    border-radius: 25px;
+    background-color: #121212; /* Fundo preto */
+    color: #00ff88; /* Ícones e texto verdes */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 25px; /* Bordas arredondadas */
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .social-links a i {
-    margin-right: 8px;
-    font-size: 1.2rem;
+    margin-right: 10px;
+    font-size: 1.5rem; /* Tamanho do ícone */
 }
 
-social-links a:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+.social-links a:hover {
+    background-color: #121212; /* Fundo verde mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Efeito de zoom */
 }
 
 .hero-image {
@@ -127,7 +125,8 @@ section h2 {
     margin-bottom: 20px;
 }
 
-section p, section ul {
+section p,
+section ul {
     font-size: 1.1rem;
     margin: 0 auto;
     max-width: 800px;
@@ -154,17 +153,63 @@ ul li:hover {
 
 /* Project Cards */
 .project-card {
+    flex: 1 1 calc(50% - 20px); /* Cada card ocupa 50% do espaço menos o gap */
+    max-width: 500px;
     background-color: #1b1b1b;
-    margin: 15px auto;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    color: #00ff88;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.project-content a.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #000000; /* Cor de fundo verde */
+    color: #00ff88; /* Cor do texto preto */
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.project-content a.btn:hover {
+    background-color: #000000; /* Cor de fundo verde mais escuro no hover */
+    color: #00ff88; /* Cor do texto branco no hover */
+    transform: scale(1.05); /* Leve efeito de zoom */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Sombra mais intensa no hover */
+}
+
+/* Contêiner dos projetos */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 /* Skills Grid */
@@ -222,13 +267,19 @@ button:hover {
 /* About Section */
 .about-box {
     background-color: #1b1b1b;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     max-width: 800px;
     margin: 0 auto;
     color: #e0e0e0;
     line-height: 1.8;
+    text-align: justify;
+}
+
+.about-box p {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 /* Contact Section */
@@ -264,25 +315,26 @@ button:hover {
     gap: 15px;
     background-color: #121212;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     color: #00ff88;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
 }
 
 .contact-item div {
     text-align: left;
 }
 
-.contact-item div p, .contact-item div a {
+.contact-item div p,
+.contact-item div a {
     margin: 5px 0;
     font-size: 1rem;
-}
-
-contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .contact-item i {
@@ -290,18 +342,13 @@ contact-item:hover {
     color: #00ff88;
 }
 
-.contact-item div p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.contact-item div a {
+contact-item div a {
     color: #00ff88;
     text-decoration: none;
     font-weight: bold;
 }
 
-.contact-item div a:hover {
+contact-item div a:hover {
     text-decoration: underline;
 }
 
@@ -339,72 +386,157 @@ contact-item:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Hero Section */
     .hero-content {
-        flex-direction: column; /* Empilha os elementos verticalmente */
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px; /* Reduz o padding */
+        padding: 20px;
     }
 
     .hero-image {
-        width: 120px; /* Reduz o tamanho da imagem */
+        width: 120px;
         height: 120px;
-        margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+        margin-bottom: 15px;
     }
 
     .hero-text h1 {
-        font-size: 1.8rem; /* Reduz o tamanho do título */
+        font-size: 1.8rem;
     }
 
     .hero-text h2 {
-        font-size: 1.2rem; /* Reduz o tamanho do subtítulo */
+        font-size: 1.2rem;
     }
 
     .hero-text p {
-        font-size: 1rem; /* Reduz o tamanho do texto */
+        font-size: 1rem;
     }
 
-    /* Seção de Contato */
     .contact-info {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o grid */
-        gap: 20px; /* Espaçamento consistente */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 
     .contact-item {
-        flex-direction: row; /* Mantém os itens alinhados horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
-        text-align: left; /* Alinha o texto à esquerda */
-        padding: 20px; /* Padding consistente */
-    }
-
-    .contact-item div {
-        text-align: left; /* Garante que o texto dentro do div fique alinhado à esquerda */
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 20px;
     }
 
     .contact-item div p,
     .contact-item div a {
-        font-size: 0.9rem; /* Ajusta o tamanho do texto */
-        margin: 5px 0; /* Espaçamento entre as linhas */
+        font-size: 0.9rem;
+        margin: 5px 0;
     }
 
     .contact-item i {
-        font-size: 1.5rem; /* Reduz o tamanho do ícone */
-        margin-right: 10px; /* Espaçamento entre ícone e texto */
+        font-size: 1.5rem;
+        margin-right: 10px;
     }
 
-    /* Layout Geral */
+    .project-card {
+        flex: 1 1 calc(100% - 20px); /* Cada card ocupa 100% do espaço menos o gap */
+        max-width: 100%;
+    }
+
     body {
-        padding: 10px; /* Reduz o padding geral */
+        padding: 10px;
     }
 
     section {
-        padding: 40px 10px; /* Reduz o padding das seções */
+        padding: 40px 10px;
     }
 
     footer {
-        font-size: 0.8rem; /* Reduz o tamanho do texto no rodapé */
+        font-size: 0.8rem;
     }
 }
